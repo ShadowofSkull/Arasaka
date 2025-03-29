@@ -1,10 +1,12 @@
+import Navbar from "@/components/Navbar";
 import Query from "@/components/QueryBar";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh bg-gradient-to-b from-white to-gray-50 dark:from-zinc-900 dark:to-black text-zinc-900 dark:text-white font-sans">
-      <main className="flex-grow flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full overflow-hidden">
-        <div id="hero" className="w-full py-16 md:py-24 space-y-6 relative">
+      <Navbar />
+      <main className="flex-grow flex flex-col items-center justify-center px-0 w-full overflow-hidden">
+        <div id="hero" className="w-full py-16 md:py-24 space-y-6 relative px-4 sm:px-6 lg:px-8">
           {/* Decorative blurred circle */}
           <div className="absolute -top-20 -left-20 w-64 h-64 bg-red-300 dark:bg-red-700 rounded-full filter blur-3xl opacity-20 dark:opacity-10 z-0"></div>
           
@@ -18,7 +20,7 @@ export default function Home() {
           <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto my-8"></div>
         </div>
 
-        <div className="w-full max-w-2xl mx-auto backdrop-blur-xl bg-white/60 dark:bg-zinc-800/40 rounded-3xl shadow-lg p-6 md:p-8 border border-white/20 dark:border-zinc-700/30 relative z-10 overflow-hidden mb-12">
+        <div className="w-full max-w-2xl mx-auto backdrop-blur-xl bg-white/60 dark:bg-zinc-800/40 rounded-3xl shadow-lg p-6 md:p-8 border border-white/20 dark:border-zinc-700/30 relative z-10 overflow-hidden mb-12 mx-4 sm:mx-6 lg:mx-8">
           {/* Subtle glow effect */}
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-red-300 dark:bg-red-700 rounded-full filter blur-3xl opacity-10 dark:opacity-10 z-0"></div>
           <Query />

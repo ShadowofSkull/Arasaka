@@ -31,3 +31,38 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* custom scrollbar styling */
+@layer utilities {
+  /* Modern webkit scrollbar styling */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: theme('colors.zinc.100');
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: theme('colors.red.400');
+    border-radius: 3px;
+  }
+  
+  .dark .scrollbar-thin::-webkit-scrollbar-track {
+    background: theme('colors.zinc.800');
+  }
+  
+  .dark .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: theme('colors.red.600');
+  }
+
+  /* Firefox scrollbar */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.red.400') theme('colors.zinc.100');
+  }
+  
+  .dark .scrollbar-thin {
+    scrollbar-color: theme('colors.red.600') theme('colors.zinc.800');
+  }
+}
