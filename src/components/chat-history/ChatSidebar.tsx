@@ -8,7 +8,7 @@ interface ChatSidebarProps {
 
 const ChatSidebar: React.FC<ChatSidebarProps> = ({ onClose }) => {
   return (
-    <div className="fixed inset-0 z-40 flex">
+    <div className="fixed inset-0 z-(--zindex-fg) flex">
       {/* Overlay */}
       <div
         className="fixed inset-0 bg-black/30 backdrop-blur-sm"
@@ -17,7 +17,7 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({ onClose }) => {
       ></div>
 
       {/* Sidebar panel */}
-      <div className="relative flex-1 flex flex-col max-w-xs w-full h-full bg-white dark:bg-zinc-900 border-r border-zinc-200 dark:border-zinc-800 shadow-xl">
+      <div className="relative flex flex-col max-w-xs w-80 h-dvh bg-white dark:bg-zinc-900 border-r border-zinc-200 dark:border-zinc-800 shadow-xl">
         <div className="flex items-center justify-between p-4 border-b border-zinc-200 dark:border-zinc-800">
           <h2 className="text-lg font-medium text-zinc-900 dark:text-white">
             Chat History
@@ -44,7 +44,7 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({ onClose }) => {
         </div>
 
         {/* Custom styled scrollable area */}
-        <div className="flex-1 h-full overflow-y-auto scrollbar-thin scrollbar-thumb-red-400 scrollbar-track-zinc-100 dark:scrollbar-thumb-red-600 dark:scrollbar-track-zinc-800">
+        <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-red-400 scrollbar-track-zinc-100 dark:scrollbar-thumb-red-600 dark:scrollbar-track-zinc-800">
           <div className="p-4 h-full">
             <ul className="space-y-2">
               {chatHistory.map((chat) => (
@@ -58,8 +58,8 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({ onClose }) => {
           </div>
         </div>
 
-        {/* New Chat button - fixed at bottom */}
-        <div className="p-4 border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
+        {/* New Chat button */}
+        <div className="mt-auto p-4 border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
           <button className="w-full flex items-center justify-center px-4 py-3 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors duration-200">
             <svg
               className="mr-2 -ml-1 h-5 w-5"

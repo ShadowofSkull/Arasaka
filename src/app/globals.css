@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Use this to manage z-index to avoid hard to track z-index interaction */
+  --zindex-bg: 0;
+  --zindex-fg: 1;
+  --zindex-nav: 2;
 }
 
 @theme inline {

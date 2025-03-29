@@ -28,7 +28,7 @@ export default function Query() {
   };
 
   return (
-    <div className="w-full relative z-10 overflow-hidden">
+    <div className="w-full relative z-(--zindex-fg) overflow-hidden">
       {/* Input Section */}
       <Form
         action={handleSubmit}
