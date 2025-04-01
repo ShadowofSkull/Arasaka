@@ -10,7 +10,12 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.config({
+    extends: ["next/core-web-vitals", "next/typescript"],
+    rules: {
+      "react/jsx-no-leaked-render": ["error", { "validStrategies": ["coerce"] }] //Avoid unsafe "&&" Operator for Conditional Rendering
+    },
+  }),
 ];
 
 export default eslintConfig;

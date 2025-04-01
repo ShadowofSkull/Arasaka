@@ -2,7 +2,7 @@
 
 ## AI-Powered Electronics Marketplace
 
-![Arasaka Banner](public/arasaka-banner.png)
+![Arasaka Banner](public/hori-logo.svg)
 
 Arasaka is a modern e-commerce platform that leverages Google's Gemini AI to provide personalized computer hardware recommendations. This application showcases how AI can enhance the shopping experience by understanding user needs and suggesting the most appropriate products.
 
@@ -71,7 +71,7 @@ arasaka/
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the GNU AGPLv3 License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
