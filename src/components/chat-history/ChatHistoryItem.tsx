@@ -30,7 +30,7 @@ const ChatHistoryItem: React.FC<ChatHistoryItemProps> = ({ id, title }) => {
           <span className="truncate font-medium">{title}</span>
         </div>
         <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-          Last updated: Today
+          Last updated: today
         </p>
       </Link>
     </li>
