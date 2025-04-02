@@ -1,6 +1,6 @@
 import React from "react";
 import ChatHistoryItem from "./ChatHistoryItem";
-import { chatHistory } from "../../data/chatHistoryData";
+import { chatHistory } from "../../utils/chatHistoryData";
 
 interface ChatSidebarProps {
   onClose: () => void;
@@ -8,7 +8,7 @@ interface ChatSidebarProps {
 
 const ChatSidebar: React.FC<ChatSidebarProps> = ({ onClose }) => {
   return (
-    <div className="fixed inset-0 z-(--zindex-fg) flex">
+    <div className="fixed inset-0 z-[calc(var(--zindex-nav)+1)] flex">
       {/* Overlay */}
       <div
         className="fixed inset-0 bg-black/30 backdrop-blur-sm"
@@ -44,8 +44,8 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({ onClose }) => {
         </div>
 
         {/* Custom styled scrollable area */}
-        <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-red-400 scrollbar-track-zinc-100 dark:scrollbar-thumb-red-600 dark:scrollbar-track-zinc-800">
-          <div className="p-4 h-full">
+        <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-red-400 scrollbar-track-zinc-100 dark:scrollbar-thumb-red-600 dark:scrollbar-track-zinc-800">
+          <div className="p-4">
             <ul className="space-y-2">
               {chatHistory.map((chat) => (
                 <ChatHistoryItem
@@ -59,7 +59,7 @@ const ChatSidebar: React.FC<ChatSidebarProps> = ({ onClose }) => {
         </div>
 
         {/* New Chat button */}
-        <div className="mt-auto p-4 border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
+        <div className="p-4 border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
           <button className="w-full flex items-center justify-center px-4 py-3 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors duration-200">
             <svg
               className="mr-2 -ml-1 h-5 w-5"
