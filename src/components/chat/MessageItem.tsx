@@ -49,32 +49,32 @@ export default function MessageItem({ message }: MessageItemProps) {
           <div className="markdown-content text-sm text-zinc-800 dark:text-zinc-200 break-words">
             <ReactMarkdown
               components={{
-                h1: ({ node, ...props }) => (
+                h1: ({ ...props }) => (
                   <h1 className="text-lg font-bold my-2" {...props} />
                 ),
-                h2: ({ node, ...props }) => (
+                h2: ({ ...props }) => (
                   <h2 className="text-md font-bold my-2" {...props} />
                 ),
-                h3: ({ node, ...props }) => (
+                h3: ({ ...props }) => (
                   <h3 className="text-base font-bold my-1" {...props} />
                 ),
-                h4: ({ node, ...props }) => (
+                h4: ({ ...props }) => (
                   <h4 className="text-sm font-bold my-1" {...props} />
                 ),
-                p: ({ node, ...props }) => <p className="my-1" {...props} />,
-                ul: ({ node, ...props }) => (
+                p: ({ ...props }) => <p className="my-1" {...props} />,
+                ul: ({ ...props }) => (
                   <ul className="list-disc pl-5 my-2" {...props} />
                 ),
-                ol: ({ node, ...props }) => (
+                ol: ({ ...props }) => (
                   <ol className="list-decimal pl-5 my-2" {...props} />
                 ),
-                li: ({ node, ...props }) => (
+                li: ({ ...props }) => (
                   <li className="my-0.5" {...props} />
                 ),
-                a: ({ node, ...props }) => (
+                a: ({ ...props }) => (
                   <a className="text-red-500 hover:underline" {...props} />
                 ),
-                code: ({ node, inline, ...props }) =>
+                code: ({ inline, ...props }: { inline?: boolean } & React.HTMLProps<HTMLElement>) =>
                   inline ? (
                     <code
                       className="bg-zinc-100 dark:bg-zinc-700 px-1 py-0.5 rounded text-red-500 dark:text-red-300 text-xs"
@@ -86,13 +86,13 @@ export default function MessageItem({ message }: MessageItemProps) {
                       {...props}
                     />
                   ),
-                pre: ({ node, ...props }) => (
+                pre: ({ ...props }) => (
                   <pre
                     className="bg-zinc-100 dark:bg-zinc-700 p-3 rounded my-2 overflow-x-auto"
                     {...props}
                   />
                 ),
-                blockquote: ({ node, ...props }) => (
+                blockquote: ({ ...props }) => (
                   <blockquote
                     className="border-l-4 border-red-300 dark:border-red-700 pl-3 my-2 text-zinc-600 dark:text-zinc-400 italic"
                     {...props}

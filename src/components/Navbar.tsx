@@ -43,33 +43,25 @@ const Navbar: React.FC = () => {
                 alt="Company Logo"
                 width={120}
                 height={120}
+                priority={true}
+                className="max-w-[120px] h-auto"
               />
             </Link>
           </div>
 
           {/* Right side - Favorites and Profile */}
-          {/* Right side - Favorites and Profile */}
           <div className="flex items-center space-x-4">
-            {/* Favorites */}
             {/* Favorites */}
             <Link
               href="/favorites"
-              href="/favorites"
               className="relative p-2 text-zinc-600 dark:text-zinc-400 hover:text-red-500 dark:hover:text-red-400"
             >
-              <span className="sr-only">Favorites</span>
               <span className="sr-only">Favorites</span>
               <svg
                 className="h-6 w-6"
                 viewBox="0 0 24 24"
                 fill="none"
-                fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
