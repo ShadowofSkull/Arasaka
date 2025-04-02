@@ -51,35 +51,30 @@ const Navbar: React.FC = () => {
                 src="/hori-logo.svg"
                 alt="Company Logo"
                 width={120}
-                height={100}
+                height={120}
               />
             </Link>
           </div>
 
-          {/* Right side - Cart and Profile */}
+          {/* Right side - Favorites and Profile */}
           <div className="flex items-center space-x-4">
-            {/* Shopping Cart */}
+            {/* Favorites */}
             <Link
-              href="/cart"
+              href="/favorites"
               className="relative p-2 text-zinc-600 dark:text-zinc-400 hover:text-red-500 dark:hover:text-red-400"
             >
-              <span className="sr-only">Shopping cart</span>
+              <span className="sr-only">Favorites</span>
               <svg
                 className="h-6 w-6"
-                fill="none"
                 viewBox="0 0 24 24"
+                fill="none"
                 stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                />
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
               </svg>
-              <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-red-500 rounded-full">
-                0
-              </span>
             </Link>
 
             {/* Profile */}
@@ -108,9 +103,7 @@ const Navbar: React.FC = () => {
 
       {/* Chat History Sidebar */}
       {!!isSidebarOpen && (
-        <ChatSidebar
-          onClose={() => setIsSidebarOpen(false)}
-        />
+        <ChatSidebar onClose={() => setIsSidebarOpen(false)} />
       )}
     </header>
   );

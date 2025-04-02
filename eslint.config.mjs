@@ -12,9 +12,6 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.config({
     extends: ["next/core-web-vitals", "next/typescript"],
-    rules: {
-      "react/jsx-no-leaked-render": ["error", { "validStrategies": ["coerce"] }] //Avoid unsafe "&&" Operator for Conditional Rendering
-    },
   }),
 ];
 

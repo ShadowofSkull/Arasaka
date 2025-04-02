@@ -18,13 +18,13 @@ export default function Home() {
             <span className="text-red-500 dark:text-red-400">Arasaka</span>
           </h1>
           <h2 className="text-xl md:text-2xl font-light text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto text-center relative z-(--zindex-fg)">
-            A Place to Get the Exact Parts You Need
+            A Place to Get the Perfect PC
           </h2>
 
           <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-red-500 to-transparent mx-auto my-8"></div>
         </div>
 
-        <div className="w-full max-w-2xl mx-auto backdrop-blur-xl bg-white/60 dark:bg-zinc-800/40 rounded-3xl shadow-lg p-6 md:p-8 border border-white/20 dark:border-zinc-700/30 relative z-(--zindex-fg) overflow-hidden mb-12 mx-4 sm:mx-6 lg:mx-8">
+        <div className="w-full max-w-2xl backdrop-blur-xl bg-white/60 dark:bg-zinc-800/40 rounded-3xl shadow-lg p-6 md:p-8 border border-white/20 dark:border-zinc-700/30 relative z-(--zindex-fg) overflow-hidden mb-12 mx-4 sm:mx-6 lg:mx-8">
           {/* Subtle glow effect */}
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-red-300 dark:bg-red-700 rounded-full filter blur-3xl opacity-10 dark:opacity-10 z-(--zindex-bg)"></div>
           <Query />

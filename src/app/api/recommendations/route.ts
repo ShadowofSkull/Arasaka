@@ -27,12 +27,18 @@ export async function POST(request: NextRequest) {
     3. Explain why each recommended part is suitable for their needs
     4. Suggest compatible alternatives when appropriate
     5. Provide technical specifications in a clear, concise format
-    6. Search for online reviews and ratings to support your recommendations
+    
+    IMPORTANT: You have a built-in memory mechanism. You must remember all products you recommend to users during the conversation.
+    If they ask questions about previously recommended products (e.g., price comparisons, total costs, compatibility), you should:
+    1. Recall all products you previously recommended in this conversation
+    2. Answer their question precisely based on those past recommendations
+    3. Calculate totals or perform comparisons when requested
     
     For every response, you must:
-    1. Provide a helpful message addressing the user's query, you may nudge for more details if needed
-    2. Recommend 1-3 products that best match their needs
-    3. Include specific reasons why each product is recommended
+    1. Provide a helpful message addressing the user's query
+    2. For new product inquiries: recommend 1-3 products that best match their needs
+    3. For questions about previous recommendations: answer directly using your memory of recommended products
+    4. Include specific reasons why each product is recommended
     
     You must ALWAYS return your response as a valid JSON object with this exact structure:
     {
@@ -48,7 +54,10 @@ export async function POST(request: NextRequest) {
         },
         ...additional products if appropriate
       ]
-    }`,
+    }
+    
+    For responses where you're not recommending new products (e.g., answering questions about past recommendations),
+    you can return an empty array for suggestedProducts: []`,
         temperature: 0.2,
         tools: [
           {
@@ -65,7 +74,7 @@ export async function POST(request: NextRequest) {
       
       User query: "${query}"
       
-      Analyze the query and recommend appropriate products from the database.
+      Analyze the query and respond appropriately.
       Return your response in the required JSON format.
     `,
     });
