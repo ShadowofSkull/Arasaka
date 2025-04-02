@@ -9,9 +9,9 @@ const Navbar: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
   return (
-    <header className="sticky top-0 z-(--zindex-nav) w-full backdrop-blur-md bg-white/70 dark:bg-zinc-900/80 border-b border-zinc-200/50 dark:border-zinc-800/50">
-      <nav className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header className="fixed top-0 left-0 right-0 z-[var(--zindex-nav)] w-full backdrop-blur-md bg-white/70 dark:bg-zinc-900/80 border-b border-zinc-200/50 dark:border-zinc-800/50 shadow-sm h-[var(--navbar-height)]">
+      <nav className="w-full px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto h-full">
+        <div className="flex justify-between items-center h-full">
           {/* Left side - Menu icon and Logo */}
           <div className="flex items-center">
             {/* Sidebar menu button */}
@@ -27,21 +27,12 @@ const Navbar: React.FC = () => {
                 fill="none"
                 viewBox="0 0 24 24"
               >
-                {isSidebarOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
 
@@ -51,7 +42,9 @@ const Navbar: React.FC = () => {
                 src="/hori-logo.svg"
                 alt="Company Logo"
                 width={120}
-                height={120}
+                height={40}
+                priority={true}
+                className="max-w-[120px] h-auto"
               />
             </Link>
           </div>
