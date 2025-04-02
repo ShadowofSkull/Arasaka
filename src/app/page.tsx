@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Query from "@/components/QueryBar";
+import Chat from "@/components/Chat";
 
 export default function Home() {
   return (
@@ -55,15 +55,15 @@ export default function Home() {
           id="query-section"
           className="snap-section w-full flex flex-col items-center justify-start px-4 sm:px-6 lg:px-8"
         >
-          <div className="w-full max-w-2xl backdrop-blur-xl bg-white/60 dark:bg-zinc-800/40 rounded-3xl shadow-lg p-4 md:p-8 border border-white/20 dark:border-zinc-700/30 relative z-[var(--zindex-fg)] overflow-hidden mx-auto ">
+          <div className="w-full max-w-2xl backdrop-blur-xl bg-white/60 dark:bg-zinc-800/40 rounded-3xl shadow-lg p-4 md:p-8 border border-white/20 dark:border-zinc-700/30 relative z-[var(--zindex-fg)] overflow-hidden mx-auto mt-15">
             {/* Subtle glow effect */}
             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-red-300 dark:bg-red-700 rounded-full filter blur-3xl opacity-10 dark:opacity-10 z-[var(--zindex-bg)]"></div>
-            <Query />
+            <Chat />
           </div>
         </section>
 
         {/* Footer - appears at the bottom of content */}
-        <footer className="py-4 px-4 border-t border-zinc-200/50 dark:border-zinc-800/50 text-xs text-zinc-500 dark:text-zinc-400 text-center backdrop-blur-sm bg-white/30 dark:bg-zinc-900/30 w-full">
+        <footer className=" py-4 px-4 border-t border-zinc-200/50 dark:border-zinc-800/50 text-xs text-zinc-500 dark:text-zinc-400 text-center backdrop-blur-sm bg-white/30 dark:bg-zinc-900/30 w-full">
           <p>Copyright &copy; Arasaka {new Date().getFullYear()}</p>
         </footer>
       </div>

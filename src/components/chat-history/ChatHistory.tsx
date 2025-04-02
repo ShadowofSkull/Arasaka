@@ -1,6 +1,6 @@
 import React from "react";
 import ChatHistoryItem from "./ChatHistoryItem";
-import { chatHistory } from "../../data/chatHistoryData";
+import { chatHistory } from "../../utils/chatHistoryData";
 
 interface ChatSidebarProps {
   onClose: () => void;

@@ -1,6 +1,6 @@
 "use client";
 
-import ChatSidebar from "@/components/chat-history/ChatSidebar";
+import ChatSidebar from "@/components/chat-history/ChatHistory";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
